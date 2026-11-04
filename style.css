@@ -1,0 +1,253 @@
+/* ==========================================================
+   COLORES Y VARIABLES
+   Aquí defino los colores UNA vez y los uso por toda la página.
+   Si quieres cambiar el aspecto de la web, cambia estos valores.
+   ========================================================== */
+:root {
+  --fondo: #f4f6fa;        /* fondo general de la página */
+  --blanco: #ffffff;
+  --texto: #243046;        /* color del texto normal */
+  --principal: #1f3a5f;    /* azul oscuro: menú, títulos, botones */
+  --acento: #e8a33d;       /* naranja suave: detalles y botón al pasar el ratón */
+  --borde: #dde3ee;        /* gris claro para los bordes */
+}
+
+/* ==========================================================
+   AJUSTES GENERALES
+   ========================================================== */
+* {
+  box-sizing: border-box;  /* el padding no agranda las cajas (más fácil de calcular) */
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* al pulsar un enlace del menú, la página se desliza suave */
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6;        /* separación entre líneas de texto */
+}
+
+/* Las secciones quedan centradas y con un ancho máximo */
+section {
+  max-width: 960px;
+  margin: 0 auto;          /* "auto" en los lados = centrado */
+  padding: 70px 24px;
+}
+
+h1, h2, h3 {
+  color: var(--principal);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  /* línea de color debajo de cada título de sección */
+  border-bottom: 4px solid var(--acento);
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin: 24px 0 10px;
+}
+
+p {
+  max-width: 65ch;         /* evita líneas demasiado largas, se lee mejor */
+}
+
+a {
+  color: var(--principal);
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--acento);    /* cambia de color al pasar el ratón */
+}
+
+/* ==========================================================
+   MENÚ (cabecera)
+   ========================================================== */
+.cabecera {
+  background-color: var(--principal);
+  position: sticky;        /* el menú se queda fijo arriba al hacer scroll */
+  top: 0;
+  z-index: 10;             /* para que quede por encima del resto */
+  display: flex;           /* flex = pone los elementos en fila */
+  justify-content: space-between; /* logo a la izquierda, menú a la derecha */
+  align-items: center;     /* los centra en vertical */
+  padding: 14px 32px;
+}
+
+.logo {
+  color: var(--blanco);
+  font-size: 1.4rem;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.menu ul {
+  list-style: none;        /* quita las viñetas de la lista */
+  display: flex;           /* los enlaces del menú en fila */
+  gap: 24px;               /* espacio entre enlaces */
+}
+
+.menu a {
+  color: var(--blanco);
+  text-decoration: none;   /* quita el subrayado */
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent; /* línea invisible que aparece al pasar el ratón */
+}
+
+.menu a:hover {
+  color: var(--blanco);
+  border-bottom-color: var(--acento);
+}
+
+/* ==========================================================
+   INICIO (hero): texto a un lado e imagen al otro
+   ========================================================== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  margin-bottom: 28px;
+  font-size: 1.1rem;
+}
+
+.foto {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;      /* 50% = imagen redonda */
+  border: 6px solid var(--acento);
+  object-fit: cover;       /* la imagen se recorta sin deformarse */
+}
+
+/* Botón (enlace con aspecto de botón) */
+.boton {
+  display: inline-block;
+  background-color: var(--principal);
+  color: var(--blanco);
+  text-decoration: none;
+  padding: 12px 26px;
+  border-radius: 8px;
+}
+
+.boton:hover {
+  background-color: var(--acento);
+  color: var(--principal);
+}
+
+/* ==========================================================
+   SOBRE MÍ: etiquetas de tecnologías
+   ========================================================== */
+.etiquetas {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;         /* si no caben en una fila, pasan a la siguiente */
+  gap: 10px;
+}
+
+.etiquetas li {
+  background-color: var(--blanco);
+  border: 2px solid var(--principal);
+  color: var(--principal);
+  padding: 6px 16px;
+  border-radius: 20px;     /* esquinas muy redondeadas = forma de píldora */
+  font-weight: 600;
+}
+
+/* ==========================================================
+   PROYECTOS: tarjetas en columnas
+   ========================================================== */
+.tarjetas {
+  display: grid;           /* grid = cuadrícula */
+  /* columnas automáticas: mínimo 250px cada una, se reparten el espacio */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 10px;
+}
+
+.tarjeta {
+  background-color: var(--blanco);
+  border: 1px solid var(--borde);
+  border-top: 5px solid var(--acento); /* borde de arriba más grueso y naranja */
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.tarjeta h3 {
+  margin-top: 0;
+}
+
+.tarjeta p {
+  margin-bottom: 14px;
+}
+
+/* ==========================================================
+   CONTACTO
+   ========================================================== */
+.contacto-lista {
+  list-style: none;
+  margin-top: 14px;
+}
+
+.contacto-lista li {
+  margin-bottom: 8px;
+}
+
+/* ==========================================================
+   PIE DE PÁGINA
+   ========================================================== */
+.pie {
+  background-color: var(--principal);
+  color: var(--blanco);
+  text-align: center;
+  padding: 28px 24px;
+}
+
+.pie p {
+  margin: 0 auto 8px;
+}
+
+.pie a {
+  color: var(--acento);
+}
+
+/* ==========================================================
+   MÓVIL: si la pantalla mide menos de 700px, ajustamos
+   ========================================================== */
+@media (max-width: 700px) {
+  .cabecera {
+    flex-direction: column;  /* logo arriba, menú debajo */
+    gap: 10px;
+  }
+
+  .menu ul {
+    gap: 16px;
+  }
+
+  .hero {
+    flex-direction: column-reverse; /* la imagen pasa arriba del texto */
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+}

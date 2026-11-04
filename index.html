@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- Le dice al navegador que esto es HTML5 -->
+<html lang="es">
+<head>
+  <!-- HEAD: información de la página que NO se ve en pantalla -->
+  <meta charset="UTF-8"> <!-- Para que se vean bien las tildes y la ñ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Para que se vea bien en el móvil -->
+  <title>Álvaro Barajas | Portfolio</title> <!-- Texto de la pestaña del navegador -->
+  <link rel="stylesheet" href="style.css"> <!-- Aquí se conecta el archivo CSS -->
+</head>
+
+<body>
+  <!-- BODY: todo lo que se ve en pantalla -->
+
+  <!-- ===== MENÚ ===== -->
+  <header class="cabecera">
+    <a class="logo" href="#inicio">Alvaro Barajas Luque</a>
+
+    <!-- nav = menú de navegación. Cada enlace (a) lleva a una sección usando su id con # -->
+    <nav class="menu">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#estudios">Estudios</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== SECCIÓN 1: INICIO ===== -->
+    <!-- El id="inicio" es el "destino" del enlace href="#inicio" del menú -->
+    <section id="inicio" class="hero">
+      <div class="hero-texto">
+        <h1>Hola, soy Álvaro Barajas</h1>
+        <p>Estudiante de 1º de ASIR (Administración de Sistemas Informáticos en Red). Me gusta montar servidores, probar sistemas operativos y aprender cómo funciona todo por dentro.</p>
+        <!-- Un enlace con aspecto de botón: lleva a otra sección de esta misma página -->
+        <a class="boton" href="#proyectos">Ver mis proyectos</a>
+      </div>
+
+      <!-- Imagen: src = ruta del archivo, alt = texto que se lee si la imagen no carga -->
+      <img class="foto" src="imagenes/foto.svg" alt="Foto de perfil de Álvaro">
+    </section>
+
+    <!-- ===== SECCIÓN 2: ESTUDIOS ===== -->
+    <section id="estudios">
+      <h2>Estudios</h2>
+      <p>Tengo un grado medio de SMR, y ahora estoy haciendo el grado superior de ASIR</p>
+
+      <h3>Con qué he trabajado</h3>
+      <!-- ul = lista con viñetas, li = cada elemento de la lista -->
+      <ul class="etiquetas">
+        <li>Creación y mantenimiento de páginas web</li>
+        <li>Montaje y mantenimiento de equipos informáticos</li>
+        <li>Windows 11</li>
+        <li>Ubuntu 24.04</li>
+        <li>VirtualBox</li>
+        <li>Windows Server 2022</li>
+        <li>AWS EC2</li>
+      </ul>
+    </section>
+
+    <!-- ===== SECCIÓN 3: PROYECTOS ===== -->
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+
+      <!-- Contenedor que organiza las tarjetas en columnas (ver .tarjetas en el CSS) -->
+      <div class="tarjetas">
+
+        <!-- article = una tarjeta independiente -->
+        <article class="tarjeta">
+          <h3>Instalación dual en VirtualBox</h3>
+          <p>Instalé Windows 11 y Ubuntu 24.04 en una máquina virtual y documenté todo el proceso paso a paso en un informe.</p>
+        </article>
+
+        <article class="tarjeta">
+          <h3>Instancias EC2 en AWS Academy</h3>
+          <p>Creé servidores en la nube con Windows Server 2022 y Ubuntu 24.04 y me conecté a ellos de forma remota.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== SECCIÓN 4: CONTACTO ===== -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Si quieres escribirme, aquí me encuentras:</p>
+      <ul class="contacto-lista">
+        <!-- mailto: abre el programa de correo. CAMBIA este correo por el tuyo -->
+        <li>Correo: <a href="mailto:balual_aliesma@iesmedinaazahara.es">balual_aliesma@iesmedinaazahara.es</a></li>
+        <li>GitHub: <a href="https://github.com/barajas8" target="_blank" rel="noopener">github.com/barajas8</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer class="pie">
+    <p>Álvaro Barajas Luque - Portfolio</p>
+    <!-- Enlace que sube al principio de la página -->
+    <a href="#inicio">Volver arriba</a>
+  </footer>
+
+</body>
+</html>
