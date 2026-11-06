@@ -251,3 +251,61 @@ a:hover {
     font-size: 2.1rem;
   }
 }
+/* ===== LAYOUT CON LATERAL IZQUIERDO ===== */
+/* 3 columnas: vídeos | contenido (máx. 900px) | hueco libre a la derecha
+   Así tu contenido sigue centrado en la pantalla */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 900px) 1fr;
+  gap: 40px;
+  padding: 0 30px;
+}
+
+/* El main ya no se centra solo, lo centra la rejilla */
+main {
+  max-width: none;
+  margin: 0;
+}
+
+/* Lateral: se queda pegado al bajar la página */
+.lateral {
+  position: sticky;
+  top: 110px;             /* un poco más que la altura de tu menú azul */
+  align-self: start;
+  justify-self: center;
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 60px;
+}
+
+.lateral h3 {
+  color: #1e3a5f;
+  border-bottom: 3px solid #e8a33d;
+  align-self: flex-start;
+}
+
+/* Vídeos grandes, redondeados y en formato 16:9 */
+.lateral iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(30, 58, 95, 0.15);
+}
+
+/* Pantallas pequeñas (móvil, portátil pequeño):
+   una sola columna y los vídeos pasan debajo del contenido */
+@media (max-width: 1300px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .lateral {
+    position: static;
+    order: 2;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
