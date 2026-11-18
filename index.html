@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-<!-- Le dice al navegador que esto es HTML5 -->
 <html lang="es">
+
 <head>
-  <!-- HEAD: información de la página que NO se ve en pantalla -->
-  <meta charset="UTF-8"> <!-- Para que se vean bien las tildes y la ñ -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Para que se vea bien en el móvil -->
-  <title>Álvaro Barajas | Portfolio</title> <!-- Texto de la pestaña del navegador -->
-  <link rel="stylesheet" href="estilos/style.css"> <!-- Aquí se conecta el archivo CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Álvaro Barajas | Portfolio</title>
+  <!-- id="tema" para que el botón pueda cambiar este archivo por el oscuro -->
+  <link id="tema" rel="stylesheet" href="estilos/estilo.css">
+
+  <!-- Feeds RSS y Atom -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="sindicacion/rss.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="sindicacion/atom.xml">
 </head>
 
 <body>
-  <!-- BODY: todo lo que se ve en pantalla -->
 
-  <!-- ===== MENÚ ===== -->
+  <!-- ========== MENÚ DE ARRIBA ========== -->
   <header class="cabecera">
-    <a class="logo" href="#inicio">Alvaro Barajas Luque</a>
+    <div class="cabecera-izq">
+      <button id="boton-tema" class="boton-tema">Modo oscuro</button>
+      <a class="logo" href="#inicio">Alvaro Barajas Luque</a>
+    </div>
 
-    <!-- nav = menú de navegación. Cada enlace (a) lleva a una sección usando su id con # -->
-    <nav class="menu">
-      <ul>
+    <nav>
+      <ul class="menu">
         <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
         <li><a href="#estudios">Estudios</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#contacto">Contacto</a></li>
@@ -27,102 +33,174 @@
     </nav>
   </header>
 
-  <!-- Contenedor de 3 columnas: lateral izquierdo | contenido | lateral derecho -->
-<div class="layout">
-  
-      <!-- MENU LATERAL IZQUIERDO # -->
-<aside class="lateral">
-    <h3>Vídeos interesantes</h3>
-    <iframe
-      src="https://www.youtube-nocookie.com/embed/HaVCSPHV7xw"
-      title="Vídeo de YouTube"
-      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-      loading="lazy">
-    </iframe>
-    <iframe
-      src="https://www.youtube-nocookie.com/embed/FHdTxyR6rnc"
-      title="Vídeo de YouTube"
-      allowfullscreen
-      loading="lazy">
-    </iframe>
-  </aside>
 
-  
-  <main>
+  <!-- Caja que pone la barra lateral a la izquierda y el contenido a la derecha -->
+  <div class="pagina">
 
-    <!-- ===== SECCIÓN 1: INICIO ===== -->
-    <!-- El id="inicio" es el "destino" del enlace href="#inicio" del menú -->
-    <section id="inicio" class="hero">
-      <div class="hero-texto">
-        <h1>Hola, soy Álvaro Barajas</h1>
-        <p>Estudiante de 1º de ASIR (Administración de Sistemas Informáticos en Red). Me gusta montar servidores, probar sistemas operativos y aprender cómo funciona todo por dentro.</p>
-        <!-- Un enlace con aspecto de botón: lleva a otra sección de esta misma página -->
-        <a class="boton" href="#proyectos">Ver mis proyectos</a>
-      </div>
+    <!-- ========== BARRA LATERAL ========== -->
+    <aside class="lateral">
+      <h2>Contenido</h2>
 
-      <!-- Imagen: src = ruta del archivo, alt = texto que se lee si la imagen no carga -->
-      <img class="foto" src="imagenes/foto.jpeg" alt="Foto de perfil de Álvaro">
-    </section>
+      <!-- details = desplegable. summary = el título en el que se pulsa -->
+      <details id="videos">
+        <summary>Vídeos interesantes</summary>
+        <iframe src="https://www.youtube-nocookie.com/embed/HaVCSPHV7xw" title="Vídeo 1" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/FHdTxyR6rnc" title="Vídeo 2" allowfullscreen></iframe>
+      </details>
 
-    <!-- ===== SECCIÓN 2: ESTUDIOS ===== -->
-    <section id="estudios">
-      <h2>Estudios</h2>
-      <p>Tengo un grado medio de SMR, y ahora estoy haciendo el grado superior de ASIR</p>
+      <details>
+        <summary>GitHub</summary>
+        <a href="https://github.com/barajas8" target="_blank">github.com/barajas8</a>
+      </details>
 
-      <h3>Con qué he trabajado</h3>
-      <!-- ul = lista con viñetas, li = cada elemento de la lista -->
-      <ul class="etiquetas">
-        <li>Creación y mantenimiento de páginas web</li>
-        <li>Montaje y mantenimiento de equipos informáticos</li>
-        <li>Windows 11</li>
-        <li>Ubuntu 24.04</li>
-        <li>VirtualBox</li>
-        <li>Windows Server 2022</li>
-        <li>AWS EC2</li>
-      </ul>
-    </section>
+      <details>
+        <summary>Cómo funciona esta web</summary>
+        <p>HTML da la estructura a la página (títulos, párrafos, enlaces...).</p>
+        <p>CSS le da el aspecto: colores, tamaños y colocación.</p>
+        <p>JavaScript hace que funcione el botón para cambiar de tema.</p>
+      </details>
 
-    <!-- ===== SECCIÓN 3: PROYECTOS ===== -->
-    <section id="proyectos">
-      <h2>Proyectos</h2>
+      <details>
+        <summary>Mis archivos CSS</summary>
+        <a href="estilos/estilo.css" target="_blank">estilo.css</a><br>
+        <a href="estilos/estilo-oscuro.css" target="_blank">estilo-oscuro.css</a>
+      </details>
 
-      <!-- Contenedor que organiza las tarjetas en columnas (ver .tarjetas en el CSS) -->
-      <div class="tarjetas">
+      <details>
+        <summary>Enlaces de interés</summary>
+        <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">HTML en MDN</a><br>
+        <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank">CSS en MDN</a>
+      </details>
 
-        <!-- article = una tarjeta independiente -->
-        <article class="tarjeta">
-          <h3>Creacion de un sistema de gestión de blogs</h3>
-          <p>Cree junto un compañero un sistema para crear un blog para la asignatura de digitalización, está disponible en mi perfil de GitHub.</p>
-        </article>
+      <details>
+        <summary>Suscripciones</summary>
+        <a href="sindicacion/rss.xml">RSS</a> ·
+        <a href="sindicacion/atom.xml">Atom</a>
+      </details>
+    </aside>
 
-        <article class="tarjeta">
-          <h3>Gestion de sistemas operativos en la nube</h3>
-          <p>Tengo experiencia en la gestion de sistemas operativos en la nube como por ejemplo en AWS o Azure.</p>
-        </article>
 
-      </div>
-    </section>
+    <main>
 
-    <!-- ===== SECCIÓN 4: CONTACTO ===== -->
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>Si quieres escribirme, aquí me encuentras:</p>
-      <ul class="contacto-lista">
-        <!-- mailto: abre el programa de correo. CAMBIA este correo por el tuyo -->
-        <li>Correo: <a href="mailto:balual_aliesma@iesmedinaazahara.es">balual_aliesma@iesmedinaazahara.es</a></li>
-        <li>GitHub: <a href="https://github.com/barajas8" target="_blank" rel="noopener">github.com/barajas8</a></li>
-      </ul>
-    </section>
+      <!-- ========== INICIO ========== -->
+      <section id="inicio" class="inicio">
+        <div>
+          <h1>Hola, soy Álvaro Barajas</h1>
+          <p>Estudiante de 1º de ASIR (Administración de Sistemas Informáticos en Red). Me gusta montar servidores, probar sistemas operativos y aprender cómo funciona todo por dentro.</p>
+          <a class="boton" href="#proyectos">Ver mis proyectos</a>
+        </div>
+        <img class="foto" src="imagenes/foto.jpeg" alt="Foto de Álvaro">
+      </section>
 
-  </main>
-</div>
-  <!-- ===== PIE DE PÁGINA ===== -->
-  <footer class="pie">
-    <p>Álvaro Barajas Luque - Portfolio</p>
-    <!-- Enlace que sube al principio de la página -->
+
+      <!-- ========== SOBRE MÍ ========== -->
+      <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+
+        <div class="tarjetas">
+          <article class="tarjeta">
+            <h3>Datos personales</h3>
+            <p><strong>Nombre:</strong> Álvaro Barajas Luque</p>
+            <p><strong>Curso:</strong> <span>1.º de ASIR</span></p>
+            <p><strong>Estudios previos:</strong> <span>Grado medio de SMR</span></p>
+          </article>
+
+          <article class="tarjeta">
+            <h3>Con qué he trabajado</h3>
+            <ul class="etiquetas">
+              <li>Páginas web</li>
+              <li>Montaje de equipos</li>
+              <li>Windows 11</li>
+              <li>Ubuntu 24.04</li>
+              <li>VirtualBox</li>
+              <li>Windows Server 2022</li>
+              <li>AWS EC2</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+
+      <!-- ========== ESTUDIOS ========== -->
+      <section id="estudios">
+        <h2>Estudios</h2>
+
+        <!-- Para añadir otra etapa, copia un <article> entero -->
+        <div class="tarjetas">
+          <article class="tarjeta">
+            <h3>Grado medio: SMR</h3>
+            <p class="fecha">Finalizado</p>
+            <p>Sistemas Microinformáticos y Redes.</p>
+          </article>
+
+          <article class="tarjeta">
+            <h3>Grado superior: ASIR</h3>
+            <p class="fecha">Actualidad</p>
+            <p>Administración de Sistemas Informáticos en Red.</p>
+          </article>
+        </div>
+      </section>
+
+
+      <!-- ========== PROYECTOS ========== -->
+      <section id="proyectos">
+        <h2>Proyectos</h2>
+
+        <div class="tarjetas">
+          <article class="tarjeta">
+            <h3>Sistema de gestión de blogs</h3>
+            <p>Creé junto a un compañero un sistema para crear un blog para la asignatura de digitalización, está disponible en mi perfil de GitHub.</p>
+          </article>
+
+          <article class="tarjeta">
+            <h3>Sistemas operativos en la nube</h3>
+            <p>Tengo experiencia en la gestión de sistemas operativos en la nube como por ejemplo en AWS o Azure.</p>
+          </article>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+
+  <!-- ========== PIE DE PÁGINA ========== -->
+  <footer id="contacto" class="pie">
+    <h2>Contacto</h2>
+    <p><a href="mailto:balual_aliesma@iesmedinaazahara.es">balual_aliesma@iesmedinaazahara.es</a></p>
+    <p><a href="https://github.com/barajas8" target="_blank">github.com/barajas8</a></p>
+    <p class="licencia">&copy; 2026 Álvaro Barajas Luque</p>
     <a href="#inicio">Volver arriba</a>
   </footer>
+
+
+  <!-- ========== JAVASCRIPT ========== -->
+  <script>
+    // 1. TEMA: cambia el archivo CSS del <link id="tema">
+    //    entre estilo.css (claro) y estilo-oscuro.css (oscuro).
+    var tema = document.getElementById("tema");
+    var botonTema = document.getElementById("boton-tema");
+
+    botonTema.onclick = function () {
+      if (tema.getAttribute("href") === "estilos/estilo.css") {
+        tema.setAttribute("href", "estilos/estilo-oscuro.css");
+        botonTema.textContent = "Modo claro";
+      } else {
+        tema.setAttribute("href", "estilos/estilo.css");
+        botonTema.textContent = "Modo oscuro";
+      }
+    };
+
+    // 2. VÍDEOS: al cerrar el desplegable, se recargan y así se paran.
+    var videos = document.getElementById("videos");
+    videos.ontoggle = function () {
+      if (!videos.open) {
+        var iframes = videos.querySelectorAll("iframe");
+        for (var i = 0; i < iframes.length; i++) {
+          iframes[i].src = iframes[i].src;
+        }
+      }
+    };
+  </script>
 
 </body>
 </html>

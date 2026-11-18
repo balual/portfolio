@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- RSS 2.0: lista de novedades que otros programas pueden leer.
+     Estructura: rss > channel (la web) > item (cada noticia) -->
+<rss version="2.0">
+  <channel>
+    <title>Portfolio de Álvaro Barajas</title>
+    <link>https://portfolioalvarobarajas.vercel.app/</link>
+    <description>Novedades de mi portfolio: estudios, proyectos y lo que voy aprendiendo en 1.º de ASIR.</description>
+    <language>es-es</language>
+    <lastBuildDate>Wed, 18 Nov 2026 10:00:00 +0100</lastBuildDate>
+
+    <item>
+      <title>Nuevo diseño del portfolio</title>
+      <link>https://portfolioalvarobarajas.vercel.app/#inicio</link>
+      <description>El portfolio tiene barra lateral con vídeos, modo claro/oscuro y secciones Sobre mí, Estudios y Proyectos.</description>
+      <pubDate>Wed, 18 Nov 2026 10:00:00 +0100</pubDate>
+      <guid>https://portfolioalvarobarajas.vercel.app/#inicio</guid>
+    </item>
+
+    <item>
+      <title>Proyectos: blog y sistemas en la nube</title>
+      <link>https://portfolioalvarobarajas.vercel.app/#proyectos</link>
+      <description>Sistema de gestión de blogs hecho con un compañero y gestión de sistemas operativos en AWS y Azure.</description>
+      <pubDate>Tue, 17 Nov 2026 10:00:00 +0100</pubDate>
+      <guid>https://portfolioalvarobarajas.vercel.app/#proyectos</guid>
+    </item>
+
+    <item>
+      <title>Estudios: de SMR a ASIR</title>
+      <link>https://portfolioalvarobarajas.vercel.app/#estudios</link>
+      <description>Grado medio de SMR terminado y ahora cursando el grado superior de ASIR.</description>
+      <pubDate>Mon, 16 Nov 2026 10:00:00 +0100</pubDate>
+      <guid>https://portfolioalvarobarajas.vercel.app/#estudios</guid>
+    </item>
+  </channel>
+</rss>

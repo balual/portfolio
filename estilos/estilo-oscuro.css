@@ -1,0 +1,13 @@
+/* ===== ESTILO OSCURO =====
+   1. Cargamos todo el diseño de estilo.css (así no lo copiamos otra vez).
+   2. Solo cambiamos los colores. Lo de abajo pisa a lo de arriba. */
+
+@import url("estilo.css");   /* tiene que ir siempre lo primero */
+
+:root {
+  --fondo: #0f1a2b;      /* azul casi negro */
+  --caja: #172840;       /* tarjetas y barra lateral */
+  --texto: #e4eaf4;      /* texto claro */
+  --principal: #f0b155;  /* títulos y enlaces en naranja claro */
+  --borde: #2a3d5c;
+}
