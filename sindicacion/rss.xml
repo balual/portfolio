@@ -1,61 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- RSS 2.0: lista de novedades que otros programas pueden leer.
-     Estructura: rss > channel (la web) > item (cada noticia).
-     Cada item es un apartado de la barra lateral "Contenido". -->
+     Estructura: rss > channel (la web) > item (cada noticia) -->
 <rss version="2.0">
   <channel>
     <title>Portfolio de Álvaro Barajas</title>
     <link>https://portfolioalvarobarajas.vercel.app/</link>
-    <description>Contenido de la barra lateral de mi portfolio.</description>
+    <description>Novedades de mi portfolio: estudios, proyectos y lo que voy aprendiendo en 1.º de ASIR.</description>
     <language>es-es</language>
-    <lastBuildDate>Fri, 27 Nov 2026 10:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 10:00:00 +0100</lastBuildDate>
 
     <item>
-      <title>Vídeos interesantes</title>
-      <link>https://portfolioalvarobarajas.vercel.app/#videos</link>
-      <description>Dos vídeos de YouTube que me parecen interesantes.</description>
-      <pubDate>Fri, 27 Nov 2026 10:00:00 +0100</pubDate>
-      <guid>https://portfolioalvarobarajas.vercel.app/#videos</guid>
+      <title>Nuevo diseño del portfolio</title>
+      <link>https://portfolioalvarobarajas.vercel.app/#inicio</link>
+      <description>El portfolio tiene barra lateral con vídeos, modo claro/oscuro y secciones Sobre mí, Estudios y Proyectos.</description>
+      <pubDate>Wed, 18 Nov 2026 10:00:00 +0100</pubDate>
+      <guid>https://portfolioalvarobarajas.vercel.app/#inicio</guid>
     </item>
 
     <item>
-      <title>GitHub</title>
-      <link>https://portfolioalvarobarajas.vercel.app/#github</link>
-      <description>Mi perfil de GitHub: github.com/barajas8.</description>
-      <pubDate>Thu, 26 Nov 2026 10:00:00 +0100</pubDate>
-      <guid>https://portfolioalvarobarajas.vercel.app/#github</guid>
+      <title>Proyectos: blog y sistemas en la nube</title>
+      <link>https://portfolioalvarobarajas.vercel.app/#proyectos</link>
+      <description>Sistema de gestión de blogs hecho con un compañero y gestión de sistemas operativos en AWS y Azure.</description>
+      <pubDate>Tue, 17 Nov 2026 10:00:00 +0100</pubDate>
+      <guid>https://portfolioalvarobarajas.vercel.app/#proyectos</guid>
     </item>
 
     <item>
-      <title>Cómo funciona esta web</title>
-      <link>https://portfolioalvarobarajas.vercel.app/#como-funciona</link>
-      <description>Explicación sencilla de qué hacen HTML, CSS y JavaScript en esta web.</description>
-      <pubDate>Wed, 25 Nov 2026 10:00:00 +0100</pubDate>
-      <guid>https://portfolioalvarobarajas.vercel.app/#como-funciona</guid>
-    </item>
-
-    <item>
-      <title>Mis archivos CSS</title>
-      <link>https://portfolioalvarobarajas.vercel.app/#archivos-css</link>
-      <description>Los dos estilos de la web: estilo.css (claro) y estilo-oscuro.css (oscuro).</description>
-      <pubDate>Tue, 24 Nov 2026 10:00:00 +0100</pubDate>
-      <guid>https://portfolioalvarobarajas.vercel.app/#archivos-css</guid>
-    </item>
-
-    <item>
-      <title>Enlaces de interés</title>
-      <link>https://portfolioalvarobarajas.vercel.app/#enlaces</link>
-      <description>Enlaces a la documentación de HTML y CSS en MDN.</description>
-      <pubDate>Mon, 23 Nov 2026 10:00:00 +0100</pubDate>
-      <guid>https://portfolioalvarobarajas.vercel.app/#enlaces</guid>
-    </item>
-
-    <item>
-      <title>Suscripciones</title>
-      <link>https://portfolioalvarobarajas.vercel.app/#suscripciones</link>
-      <description>Los feeds RSS y Atom para seguir las novedades de la web.</description>
-      <pubDate>Sun, 22 Nov 2026 10:00:00 +0100</pubDate>
-      <guid>https://portfolioalvarobarajas.vercel.app/#suscripciones</guid>
+      <title>Estudios: de SMR a ASIR</title>
+      <link>https://portfolioalvarobarajas.vercel.app/#estudios</link>
+      <description>Grado medio de SMR terminado y ahora cursando el grado superior de ASIR.</description>
+      <pubDate>Mon, 16 Nov 2026 10:00:00 +0100</pubDate>
+      <guid>https://portfolioalvarobarajas.vercel.app/#estudios</guid>
     </item>
   </channel>
 </rss>
