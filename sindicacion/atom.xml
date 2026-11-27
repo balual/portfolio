@@ -1,36 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Atom: otro formato de feed, parecido a RSS.
-     Estructura: feed (la web) > entry (cada noticia) -->
+     Estructura: feed (la web) > entry (cada noticia).
+     Cada entry es un apartado de la barra lateral "Contenido". -->
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es">
   <title>Portfolio de Álvaro Barajas</title>
-  <subtitle>Novedades de mi portfolio: estudios, proyectos y lo que voy aprendiendo en 1.º de ASIR.</subtitle>
+  <subtitle>Contenido de la barra lateral de mi portfolio.</subtitle>
   <link href="https://portfolioalvarobarajas.vercel.app/"/>
   <link rel="self" href="https://portfolioalvarobarajas.vercel.app/sindicacion/atom.xml"/>
   <id>https://portfolioalvarobarajas.vercel.app/</id>
-  <updated>2026-11-18T10:00:00+01:00</updated>
+  <updated>2026-11-27T10:00:00+01:00</updated>
   <author><name>Álvaro Barajas Luque</name></author>
 
   <entry>
-    <title>Nuevo diseño del portfolio</title>
-    <link href="https://portfolioalvarobarajas.vercel.app/#inicio"/>
-    <id>https://portfolioalvarobarajas.vercel.app/#inicio</id>
-    <updated>2026-11-18T10:00:00+01:00</updated>
-    <summary>El portfolio tiene barra lateral con vídeos, modo claro/oscuro y secciones Sobre mí, Estudios y Proyectos.</summary>
+    <title>Vídeos interesantes</title>
+    <link href="https://portfolioalvarobarajas.vercel.app/#videos"/>
+    <id>https://portfolioalvarobarajas.vercel.app/#videos</id>
+    <updated>2026-11-27T10:00:00+01:00</updated>
+    <summary>Dos vídeos de YouTube que me parecen interesantes.</summary>
   </entry>
 
   <entry>
-    <title>Proyectos: blog y sistemas en la nube</title>
-    <link href="https://portfolioalvarobarajas.vercel.app/#proyectos"/>
-    <id>https://portfolioalvarobarajas.vercel.app/#proyectos</id>
-    <updated>2026-11-17T10:00:00+01:00</updated>
-    <summary>Sistema de gestión de blogs hecho con un compañero y gestión de sistemas operativos en AWS y Azure.</summary>
+    <title>GitHub</title>
+    <link href="https://portfolioalvarobarajas.vercel.app/#github"/>
+    <id>https://portfolioalvarobarajas.vercel.app/#github</id>
+    <updated>2026-11-26T10:00:00+01:00</updated>
+    <summary>Mi perfil de GitHub: github.com/barajas8.</summary>
   </entry>
 
   <entry>
-    <title>Estudios: de SMR a ASIR</title>
-    <link href="https://portfolioalvarobarajas.vercel.app/#estudios"/>
-    <id>https://portfolioalvarobarajas.vercel.app/#estudios</id>
-    <updated>2026-11-16T10:00:00+01:00</updated>
-    <summary>Grado medio de SMR terminado y ahora cursando el grado superior de ASIR.</summary>
+    <title>Cómo funciona esta web</title>
+    <link href="https://portfolioalvarobarajas.vercel.app/#como-funciona"/>
+    <id>https://portfolioalvarobarajas.vercel.app/#como-funciona</id>
+    <updated>2026-11-25T10:00:00+01:00</updated>
+    <summary>Explicación sencilla de qué hacen HTML, CSS y JavaScript en esta web.</summary>
+  </entry>
+
+  <entry>
+    <title>Mis archivos CSS</title>
+    <link href="https://portfolioalvarobarajas.vercel.app/#archivos-css"/>
+    <id>https://portfolioalvarobarajas.vercel.app/#archivos-css</id>
+    <updated>2026-11-24T10:00:00+01:00</updated>
+    <summary>Los dos estilos de la web: estilo.css (claro) y estilo-oscuro.css (oscuro).</summary>
+  </entry>
+
+  <entry>
+    <title>Enlaces de interés</title>
+    <link href="https://portfolioalvarobarajas.vercel.app/#enlaces"/>
+    <id>https://portfolioalvarobarajas.vercel.app/#enlaces</id>
+    <updated>2026-11-23T10:00:00+01:00</updated>
+    <summary>Enlaces a la documentación de HTML y CSS en MDN.</summary>
+  </entry>
+
+  <entry>
+    <title>Suscripciones</title>
+    <link href="https://portfolioalvarobarajas.vercel.app/#suscripciones"/>
+    <id>https://portfolioalvarobarajas.vercel.app/#suscripciones</id>
+    <updated>2026-11-22T10:00:00+01:00</updated>
+    <summary>Los feeds RSS y Atom para seguir las novedades de la web.</summary>
   </entry>
 </feed>
